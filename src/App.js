@@ -1,5 +1,8 @@
-import SearchBar from './components/SearchBar/SearchBar';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+
+//components
+import SearchBar from './components/SearchBar/SearchBar';
+import TopCategories from './components/TopCategories/TopCategories';
 
 // pages
 import Home from './pages/Home';
@@ -11,27 +14,29 @@ function App() {
   return (
     <BrowserRouter>
       <div className="App flex">
-        <header className="flex">
+        <header className="flex flex-col">
           <nav className="flex flex-col p-4">
             <div className="flex">
               <img className="h-14 w-14" src="/assets/images/logo.png" alt='cipa'/>
-              <h1 className='text-4xl ml-2 mt-1'> popditt</h1>
+              <h1 className='text-4xl ml-2 mt-1 font-bold'> popditt</h1>
             </div>
             <form>
               <SearchBar/>
             </form>
-            <div className='flex flex-col'>
+            <div className='flex flex-col p-4'>
               <NavLink to="/">Home</NavLink>
               <NavLink to="all">All</NavLink>
               <NavLink to="random">Random</NavLink>
             </div>
           </nav>
+          <hr></hr>
+          <TopCategories/>
         </header>
         <main>
           <Routes>
-              <Route index element={<Feed topic/>} />
-              <Route path='all' element={<Feed/>} />
-              <Route path='random' element={<Feed />} />
+              <Route index element={<Home />} />
+              <Route path='all' element={<All />} />
+              <Route path='random' element={<Random />} />
               <Route path=':feedTopic' element={<Feed/>} />
           </Routes>
         </main>

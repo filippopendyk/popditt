@@ -17,5 +17,7 @@ code {
 }
 
 header nav a.active{
-  color: orange;
+  color: #FF5700;
+  font-weight: bold;
 }
+
