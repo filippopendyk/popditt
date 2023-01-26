@@ -1,14 +1,12 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 
 //components
-import SearchBar from './components/SearchBar/SearchBar';
-import TopCategories from './components/TopCategories/TopCategories';
+import SearchBar from '../components/SearchBar/SearchBar';
+import TopCategories from "../features/topCategories/TopCategories"; 
 
 // pages
-import Home from './pages/Home';
-import All from './pages/All';
-import Random from './pages/Random';
-import Feed from './pages/Feed';
+import Home from "../pages/Home";
+import Feed from "../pages/Feed";
 
 function App() {
   return (
@@ -33,8 +31,6 @@ function App() {
         <main>
           <Routes>
               <Route index element={<Home />} />
-              <Route path='all' element={<All />} />
-              <Route path='random' element={<Random />} />
               <Route path=':feedTopic' element={<Feed/>} />
           </Routes>
         </main>
