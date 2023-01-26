@@ -1,4 +1,5 @@
 import './App.css';
+import SearchBar from './components/SearchBar/SearchBar';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
             <h1 className='text-4xl ml-2 mt-1'>popditt</h1>
           </div>
           <form>
-            <input></input>
+            <SearchBar/>
           </form>
         </div>
       </div>
