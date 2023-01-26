@@ -20,9 +20,7 @@ function App() {
               <img className="h-14 w-14" src="/assets/images/logo.png" alt='cipa'/>
               <h1 className='text-4xl ml-2 mt-1 font-bold'> popditt</h1>
             </div>
-            <form>
               <SearchBar/>
-            </form>
             <div className='flex flex-col p-4'>
               <NavLink to="/">Home</NavLink>
               <NavLink to="all">All</NavLink>
