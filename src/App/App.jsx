@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import './App.css';
 
 //components
 import SearchBar from '../components/SearchBar/SearchBar';
@@ -19,7 +20,7 @@ function App() {
               <h1 className='text-4xl ml-2 mt-1 font-bold'> popditt</h1>
             </div>
               <SearchBar/>
-            <div className='flex flex-col p-4'>
+            <div className='navbar-main flex flex-col px-4'>
               <NavLink to="/">Home</NavLink>
               <NavLink to="all">All</NavLink>
               <NavLink to="random">Random</NavLink>
@@ -31,7 +32,7 @@ function App() {
         <main>
           <Routes>
               <Route index element={<Home />} />
-              <Route path=':feedTopic' element={<Feed/>} />
+              <Route path=':subreddit' element={<Feed/>} />
           </Routes>
         </main>
       </div>

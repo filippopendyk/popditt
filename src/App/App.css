@@ -1,0 +1,7 @@
+.navbar-main a:first-child{
+    margin-bottom: 0.5rem;
+}
+
+.navbar-main a:last-child{
+    margin-top: 0.5rem;
+}

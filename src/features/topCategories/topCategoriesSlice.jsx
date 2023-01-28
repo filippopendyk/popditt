@@ -7,7 +7,6 @@ export const fetchTopCategories = createAsyncThunk(
     .then(res => res.json())
     .then(data => {
         let arrayOfCategories = data.data.children;
-        console.log(arrayOfCategories);
         let topCategoriesAsArrOfStrings = arrayOfCategories.map((element, index) => {
             return arrayOfCategories[index].data.display_name;
         })

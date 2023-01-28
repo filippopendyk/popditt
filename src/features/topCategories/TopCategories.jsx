@@ -12,15 +12,17 @@ export default function TopCategories(){
         dispatch(fetchTopCategories());
     },[dispatch])
 
-
-    console.log(topCategories);
     return (
-    <nav className="p-8 flex flex-col">
+    <nav className="px-8 py-2 flex flex-col">
         {topCategories.loading && <div>Loading...</div>}
         {!topCategories.loading && topCategories.error ? <div>Error: {topCategories.error}</div> : null}
         {!topCategories.loading && topCategories.length ? (
             topCategories.map((element, index) => {
-                return <NavLink key={index} to={"/" + element}>{element}</NavLink>
+                if(element === "Home"){
+                    return null;
+                } else{
+                    return <NavLink className="my-2" key={index} to={"/" + element}>{element}</NavLink>
+                }
             })
         ) : null}
     </nav>
