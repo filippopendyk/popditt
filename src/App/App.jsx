@@ -23,7 +23,6 @@ function App() {
             <div className='navbar-main flex flex-col px-4'>
               <NavLink to="/">Home</NavLink>
               <NavLink to="all">All</NavLink>
-              <NavLink to="random">Random</NavLink>
             </div>
           </nav>
           <hr></hr>
