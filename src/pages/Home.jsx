@@ -1,8 +1,9 @@
+import Posts from "../features/posts/Posts"
+
 export default function Home() {
+    let subreddit = "Home"
+
     return (
-        <div>
-            <h2>Welcome</h2>
-            <p>Eluwina</p>
-        </div>
+        <Posts subreddit={subreddit} />
     )
 }

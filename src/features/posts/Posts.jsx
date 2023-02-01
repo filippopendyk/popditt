@@ -5,16 +5,15 @@ import { useDispatch } from "react-redux";
 
 export default function Posts(props){
     let { subreddit } = props;
-    const posts = useSelector(selectPosts)
+    const posts = useSelector(selectPosts);
     const dispatch = useDispatch();
-
     useEffect(() => {
         dispatch(fetchPosts(subreddit));
-    },[dispatch, subreddit]);
+    },[dispatch,subreddit]);
 
     return (
         <div>
-            {posts}
+            {}
         </div>
     )
 }
