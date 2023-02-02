@@ -1,9 +1,13 @@
 import Posts from "../features/posts/Posts"
+import FilterMenu from "../features/filter/FilterMenu";
 
 export default function Home() {
     let subreddit = "Home"
 
     return (
-        <Posts subreddit={subreddit} />
+        <>
+            <FilterMenu />
+            <Posts subreddit={subreddit} />
+        </>
     )
 }

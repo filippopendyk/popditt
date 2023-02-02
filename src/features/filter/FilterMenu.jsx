@@ -23,7 +23,7 @@ export default function FilterMenu(){
     }
 
     return (
-        <div className="p-8">
+        <div className="my-4 flex">
             <button className={filter === "best" ? "activeClass" : null} onClick={handleBest}>Best</button>
             <button className={filter === "top" ? "activeClass" : null} onClick={handleTop}>Top</button>
             <button className={filter === "new" ? "activeClass" : null} onClick={handleNew}>New</button>
