@@ -28,7 +28,7 @@ function App() {
           <hr></hr>
           <TopCategories/>
         </header>
-        <main>
+        <main className='bg-gray-theme'>
           <Routes>
               <Route index element={<Home />} />
               <Route path=':subreddit' element={<Feed/>}/>

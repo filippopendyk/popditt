@@ -5,3 +5,11 @@
 .navbar-main a:last-child{
     margin-top: 0.5rem;
 }
+
+header{
+    width: 17%;
+}
+
+main{
+    width: 83%;
+}

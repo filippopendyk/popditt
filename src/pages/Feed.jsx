@@ -6,7 +6,7 @@ export default function Feed() {
     let { subreddit } = useParams();
 
     return (
-        <div>
+        <div className="bg-gray-theme px-12">
             <FilterMenu/>
             <Posts subreddit={subreddit}/>
         </div>

@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        'gray-theme': '#C2C2C2'
+        'gray-theme': '#dae0e6',
+        'post-ups-bg': '#f8f9fa'
       }
     },
   },
