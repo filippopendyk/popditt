@@ -31,7 +31,7 @@ function App() {
         <main>
           <Routes>
               <Route index element={<Home />} />
-              <Route path=':subreddit' element={<Feed/>} />
+              <Route path=':subreddit' element={<Feed/>}/>
           </Routes>
         </main>
       </div>

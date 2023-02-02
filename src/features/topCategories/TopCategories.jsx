@@ -12,6 +12,8 @@ export default function TopCategories(){
         dispatch(fetchTopCategories());
     },[dispatch])
 
+    
+
     return (
     <nav className="px-8 py-2 flex flex-col">
         {topCategories.loading && <div>Loading...</div>}

@@ -3,16 +3,17 @@ import { useSelector } from "react-redux";
 import { fetchPosts, selectPosts } from "./postsSlice";
 import { useDispatch } from "react-redux";
 import PostsList from "./PostsList";
+import { setFilterAsDefault } from "../filter/filterSlice";
 
 export default function Posts(props){
     let { subreddit } = props;
     const posts = useSelector(selectPosts);
     const { isLoading, error } = useSelector((state) => state.posts);
-    console.log(isLoading)
 
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchPosts(subreddit));
+        dispatch(setFilterAsDefault());
     },[dispatch,subreddit]);
 
 
