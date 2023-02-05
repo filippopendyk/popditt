@@ -22,8 +22,8 @@ const SearchBar = () => {
     return (
     
     <form onSubmit={handleSubmit}>
-        <div className="my-3 rounded-3xl p-2 border-solid border border-gray-theme flex">
-            <input type="text" className="pl-2 outline-none" name="search" placeholder="Search" value={value} onChange={handleChange}></input>
+        <div className="my-3 rounded-3xl p-2 border-solid border border-gray-theme flex overflow-hidden">
+            <input type="text" className="pl-2 outline-none flex-3" name="search" placeholder="Search" value={value} onChange={handleChange}></input>
             <button className="mt-2" type='submit'>
             <IconContext.Provider value={{color: "#C2C2C2", size: "1.1em"}}>
                 <FiSearch/>

@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import './App.css';
+import { useState } from 'react';
 
 //components
 import SearchBar from '../components/SearchBar/SearchBar';
@@ -10,6 +11,9 @@ import Home from "../pages/Home";
 import Feed from "../pages/Feed";
 
 function App() {
+  const [navVisible, showNavbar] = useState(false);
+
+
   return (
     <BrowserRouter>
       <div className="App flex">
